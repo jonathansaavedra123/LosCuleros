@@ -12,7 +12,9 @@ import java.util.Scanner;
  * @author jonat
  */
 public class TresPuntos {
-    Scanner scan = new  Scanner(System.in);
+
+    Scanner scan = new Scanner(System.in);
+    int x1, x2, x3, y1, y2, y3;
 
     public void primerPunto() {
         System.out.println("INGRESE PUNTOS SEPARADOS POR UNA ,");
@@ -23,8 +25,8 @@ public class TresPuntos {
         String[] vPuntos;
         vPuntos = puntos1.split(",");
 
-        int x1 = Integer.parseInt(vPuntos[0]);
-        int y1 = Integer.parseInt(vPuntos[1]);
+        x1 = Integer.parseInt(vPuntos[0]);
+        y1 = Integer.parseInt(vPuntos[1]);
     }
 
     public void segundoPunto() {
@@ -35,8 +37,8 @@ public class TresPuntos {
         String[] vPuntos2;
         vPuntos2 = puntos2.split(",");
 
-        int x2 = Integer.parseInt(vPuntos2[0]);
-        int y2 = Integer.parseInt(vPuntos2[1]);
+        x2 = Integer.parseInt(vPuntos2[0]);
+        y2 = Integer.parseInt(vPuntos2[1]);
     }
 
     public void tercerPunto() {
@@ -47,8 +49,26 @@ public class TresPuntos {
         String[] vPuntos3;
         vPuntos3 = puntos3.split(",");
 
-        int x3 = Integer.parseInt(vPuntos3[0]);
-        int y3 = Integer.parseInt(vPuntos3[1]);
+        x3 = Integer.parseInt(vPuntos3[0]);
+        y3 = Integer.parseInt(vPuntos3[1]);
+
+    }
+
+    public void mostrarValores() {
+        System.out.println(x1 + "" + x2 + "" + x3);
+        System.out.println(y1 + "" + y2 + "" + y3);
+    }
+
+    public void calcularLargo() {
+        int largoAB = (x2 - x1);
+        int largoAB2 = (y2 - y1);
+        largoAB = (int) Math.pow(largoAB, 2);
+        largoAB2 = (int) Math.pow(largoAB2, 2);
+        int sumaxy = largoAB + largoAB2;
+       
+        float resultado1 = (float) Math.sqrt(sumaxy);
+        
+        System.out.println(resultado1);
 
     }
 }
