@@ -11,12 +11,13 @@ import java.util.Scanner;
  *
  * @author jonat
  */
-public class TresPuntos {
+public class Triangulo {
 
     Scanner scan = new Scanner(System.in);
     int x1, x2, x3, y1, y2, y3;
-
-    public TresPuntos(int x1, int x2, int x3, int y1, int y2, int y3) {
+    
+    //LE CAMBIE EL NOMBRE A LA CLASE.. SE LLAMA TRINGULO PORQUE AQUI IRAN LOS CALCULOS Y LAS VALIDACIONES
+    public Triangulo(int x1, int x2, int x3, int y1, int y2, int y3) {
         this.x1 = x1;
         this.x2 = x2;
         this.x3 = x3;
@@ -24,7 +25,7 @@ public class TresPuntos {
         this.y2 = y2;
         this.y3 = y3;
     }
-    
+    //CALCULO DE LADO 1
     public float ladoUno() {
         System.out.println("RAIZ DE (X2-X1)al cruadrado + (Y2-Y1)al cuadrado");
         
@@ -37,7 +38,7 @@ public class TresPuntos {
         
         return lado1;
     }
-
+    //CALCULO DE LADO 2
     public float ladoDos() {
         System.out.println("RAIZ DE (X3-X1)al cruadrado + (Y3-Y1)al cuadrado");
         
@@ -51,7 +52,7 @@ public class TresPuntos {
         return lado2;
                 
     }
-
+    //CALCULO DE LADO 3
     public float ladoTres() {
         System.out.println("RAIZ DE (X3-X1)al cruadrado + (Y3-Y1)al cuadrado");
         
@@ -65,5 +66,12 @@ public class TresPuntos {
         return lado3;
         
     }
+    
+    
+    /**
+     * VALIDACION PARA  VER SI ES EQUILATERO ISOSELES O ESCALENO
+     * SACAR EL AREA  Y PERIMETRO SEGUN LOS LADOS QUE SAQUE
+     * Y MOSTRAR TODOS LOS DATOS
+     */
 
 }

@@ -28,8 +28,9 @@ public class Main {
         
         if(opcion == 1){
             System.out.println("INGRESE PUNTOS SEPARADOS POR UNA ,");
-            System.out.println("INGRESE PUNTO NUMERO 1: ");
             
+            //INGRESO DEL PUNTO 1
+            System.out.println("INGRESE PUNTO NUMERO 1: ");
             String puntos1 = scan.nextLine();
 
             String[] vPuntos;
@@ -38,8 +39,8 @@ public class Main {
             int x1 = Integer.parseInt(vPuntos[0]);
             int y1 = Integer.parseInt(vPuntos[1]);
             
+            //INGRESO DEL PUNTO 2
             System.out.println("INGRESE PUNTO NUMERO 2: ");
-            
             
             String puntos2 = scan.nextLine();
 
@@ -49,8 +50,8 @@ public class Main {
             int x2 = Integer.parseInt(vPuntos2[0]);
             int y2 = Integer.parseInt(vPuntos2[1]);
             
+            //INGRESO DEL PUNTO 3
             System.out.println("INGRESE PUNTO NUMERO 3: ");
-            
             
             String puntos3 = scan.nextLine();
 
@@ -61,9 +62,13 @@ public class Main {
             int y3 = Integer.parseInt(vPuntos3[1]);
             
             
-            TresPuntos t = new TresPuntos(x1, x2, x3, y1, y2, y3);
+            // creacion del objeto triangulo
+            Triangulo t = new Triangulo(x1, x2, x3, y1, y2, y3);
+            //metodo para sacar el lado 1
             t.ladoUno();
+            //metodo para sacar el lado 2
             t.ladoDos();
+            //metodo para sacar el lado 3
             t.ladoTres();
             
             
