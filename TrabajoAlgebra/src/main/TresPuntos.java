@@ -16,59 +16,54 @@ public class TresPuntos {
     Scanner scan = new Scanner(System.in);
     int x1, x2, x3, y1, y2, y3;
 
-    public void primerPunto() {
-        System.out.println("INGRESE PUNTOS SEPARADOS POR UNA ,");
-        System.out.println("INGRESE PUNTO NUMERO 1: ");
-
-        String puntos1 = scan.nextLine();
-
-        String[] vPuntos;
-        vPuntos = puntos1.split(",");
-
-        x1 = Integer.parseInt(vPuntos[0]);
-        y1 = Integer.parseInt(vPuntos[1]);
+    public TresPuntos(int x1, int x2, int x3, int y1, int y2, int y3) {
+        this.x1 = x1;
+        this.x2 = x2;
+        this.x3 = x3;
+        this.y1 = y1;
+        this.y2 = y2;
+        this.y3 = y3;
     }
-
-    public void segundoPunto() {
-        System.out.println("INGRESE PUNTO NUMERO 2: ");
-
-        String puntos2 = scan.nextLine();
-
-        String[] vPuntos2;
-        vPuntos2 = puntos2.split(",");
-
-        x2 = Integer.parseInt(vPuntos2[0]);
-        y2 = Integer.parseInt(vPuntos2[1]);
-    }
-
-    public void tercerPunto() {
-        System.out.println("INGRESE PUNTO NUMERO 3: ");
-
-        String puntos3 = scan.nextLine();
-
-        String[] vPuntos3;
-        vPuntos3 = puntos3.split(",");
-
-        x3 = Integer.parseInt(vPuntos3[0]);
-        y3 = Integer.parseInt(vPuntos3[1]);
-
-    }
-
-    public void mostrarValores() {
-        System.out.println(x1 + "" + x2 + "" + x3);
-        System.out.println(y1 + "" + y2 + "" + y3);
-    }
-
-    public void calcularLargo() {
-        int largoAB = (x2 - x1);
-        int largoAB2 = (y2 - y1);
-        largoAB = (int) Math.pow(largoAB, 2);
-        largoAB2 = (int) Math.pow(largoAB2, 2);
-        int sumaxy = largoAB + largoAB2;
-       
-        float resultado1 = (float) Math.sqrt(sumaxy);
+    
+    public float ladoUno() {
+        System.out.println("RAIZ DE (X2-X1)al cruadrado + (Y2-Y1)al cuadrado");
         
-        System.out.println(resultado1);
-
+        int calculo = (int) Math.pow((x2-x1), 2) + (int) Math.pow((y2-y1), 2);
+        
+        System.out.println(calculo);
+        
+        float lado1 = (float) Math.sqrt(calculo);
+        System.out.println("LADO 1 MIDE: "+lado1);
+        
+        return lado1;
     }
+
+    public float ladoDos() {
+        System.out.println("RAIZ DE (X3-X1)al cruadrado + (Y3-Y1)al cuadrado");
+        
+        int calculo = (int) Math.pow((x3-x1), 2) + (int) Math.pow((y3-y1), 2);
+        
+        System.out.println(calculo);
+        
+        float lado2 = (float) Math.sqrt(calculo);
+        System.out.println("LADO 2: "+lado2);
+        
+        return lado2;
+                
+    }
+
+    public float ladoTres() {
+        System.out.println("RAIZ DE (X3-X1)al cruadrado + (Y3-Y1)al cuadrado");
+        
+        int calculo = (int) Math.pow((x3-x2), 2) + (int) Math.pow((y3-y2), 2);
+        
+        System.out.println(calculo);
+        
+        float lado3 = (float) Math.sqrt(calculo);
+        System.out.println("LADO 3: "+lado3);
+        
+        return lado3;
+        
+    }
+
 }

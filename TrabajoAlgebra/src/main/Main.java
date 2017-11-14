@@ -44,10 +44,10 @@ public class Main {
             String puntos2 = scan.nextLine();
 
             String[] vPuntos2;
-            vPuntos2 = puntos1.split(",");
+            vPuntos2 = puntos2.split(",");
         
-            int x2 = Integer.parseInt(vPuntos[0]);
-            int y2 = Integer.parseInt(vPuntos[1]);
+            int x2 = Integer.parseInt(vPuntos2[0]);
+            int y2 = Integer.parseInt(vPuntos2[1]);
             
             System.out.println("INGRESE PUNTO NUMERO 3: ");
             
@@ -55,12 +55,16 @@ public class Main {
             String puntos3 = scan.nextLine();
 
             String[] vPuntos3;
-            vPuntos3 = puntos1.split(",");
+            vPuntos3 = puntos3.split(",");
         
-            int x3 = Integer.parseInt(vPuntos[0]);
-            int y3 = Integer.parseInt(vPuntos[1]);
+            int x3 = Integer.parseInt(vPuntos3[0]);
+            int y3 = Integer.parseInt(vPuntos3[1]);
             
             
+            TresPuntos t = new TresPuntos(x1, x2, x3, y1, y2, y3);
+            t.ladoUno();
+            t.ladoDos();
+            t.ladoTres();
             
             
         }
