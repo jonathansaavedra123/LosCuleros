@@ -70,7 +70,7 @@ public class Main {
             t.ladoDos();
             //metodo para sacar el lado 3
             t.ladoTres();
-            
+            t.tipoTriangulo();
             
         }
     }
