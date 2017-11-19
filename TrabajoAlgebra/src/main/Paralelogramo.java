@@ -7,6 +7,7 @@ public class Paralelogramo {
     Scanner scan = new Scanner(System.in);
 
     int x1, x2, x3, x4, y1, y2, y3, y4;
+    float lado1, lado2, lado3, lado4;
 
     public Paralelogramo(int x1, int x2, int x3, int x4, int y1, int y2, int y3, int y4) {
         this.x1 = x1;
@@ -28,7 +29,7 @@ public class Paralelogramo {
         
         System.out.println(calculo);
         
-        float lado1 = (float) Math.sqrt(calculo);
+        lado1 = (float) Math.sqrt(calculo);
         System.out.println("LADO 1 MIDE: "+lado1);
         
         return lado1;
@@ -39,7 +40,7 @@ public class Paralelogramo {
         
         System.out.println(calculo);
         
-        float lado2 = (float) Math.sqrt(calculo);
+        lado2 = (float) Math.sqrt(calculo);
         System.out.println("LADO 2 MIDE: "+lado2);
         
         return lado2;
@@ -50,7 +51,7 @@ public class Paralelogramo {
         
         System.out.println(calculo);
         
-        float lado3 = (float) Math.sqrt(calculo);
+        lado3 = (float) Math.sqrt(calculo);
         System.out.println("LADO 2 MIDE: "+lado3);
         
         return lado3;
@@ -61,7 +62,7 @@ public class Paralelogramo {
         
         System.out.println(calculo);
         
-        float lado4 = (float) Math.sqrt(calculo);
+        lado4 = (float) Math.sqrt(calculo);
         System.out.println("LADO 2 MIDE: "+lado4);
         
         return lado4;
@@ -72,6 +73,10 @@ public class Paralelogramo {
     }
     
     public void calculoArea(){
+        
+    }
+    
+    public void comparacionLados(){
         
     }
 

@@ -27,7 +27,7 @@ public class Triangulo {
     }
     //CALCULO DE LADO 1
     public float ladoUno() {
-        System.out.println("RAIZ DE (X2-X1)al cruadrado + (Y2-Y1)al cuadrado");
+        
         
         int calculo = (int) Math.pow((x2-x1), 2) + (int) Math.pow((y2-y1), 2);
         
@@ -40,8 +40,7 @@ public class Triangulo {
     }
     //CALCULO DE LADO 2
     public float ladoDos() {
-        System.out.println("RAIZ DE (X3-X1)al cruadrado + (Y3-Y1)al cuadrado");
-        
+    
         int calculo = (int) Math.pow((x3-x1), 2) + (int) Math.pow((y3-y1), 2);
         
         System.out.println(calculo);
@@ -54,7 +53,7 @@ public class Triangulo {
     }
     //CALCULO DE LADO 3
     public float ladoTres() {
-        System.out.println("RAIZ DE (X3-X1)al cruadrado + (Y3-Y1)al cuadrado");
+      
         
         int calculo = (int) Math.pow((x3-x2), 2) + (int) Math.pow((y3-y2), 2);
         
@@ -67,7 +66,18 @@ public class Triangulo {
         
     }
     
+    public void tipoTriangulo(){
     
+        if (ladoUno() == ladoDos() && ladoUno() == ladoTres() && ladoDos() == ladoUno() && ladoDos() == ladoTres() && ladoTres() == ladoDos() && ladoTres() == ladoUno()) {
+            System.out.println("Triangulo Equilatero");   
+        }else
+        {System.out.println("Triangulo Escaleno");}
+        
+        if (ladoUno() == ladoDos() || ladoUno() == ladoTres() || ladoDos() == ladoUno() || ladoDos() == ladoTres() || ladoTres() == ladoDos() || ladoTres() == ladoUno() ) {
+            System.out.println("Triangulo Isósceles");
+        }
+        
+    }
     /**
      * VALIDACION PARA  VER SI ES EQUILATERO ISOSELES O ESCALENO
      * SACAR EL AREA  Y PERIMETRO SEGUN LOS LADOS QUE SAQUE

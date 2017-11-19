@@ -69,6 +69,8 @@ public class Main {
                 t.ladoDos();
                 //metodo para sacar el lado 3
                 t.ladoTres();
+                t.tipoTriangulo();
+                
             case 2:
                 System.out.println("INGRESE PUNTOS SEPARADOS POR UNA ,");
 
@@ -126,8 +128,11 @@ public class Main {
                 p.ladoTres();
                 //metodo para lado 4
                 p.ladoCuatro();
-        }
+                
+                //comparacion de lados
+                p.comparacionLados();
 
     }
 
+}
 }
