@@ -33,7 +33,7 @@ public class Triangulo {
         int calculo = (int) Math.pow((x2-x1), 2) + (int) Math.pow((y2-y1), 2);
         lado1 = (float) Math.sqrt(calculo);
         lado1 = Math.round(lado1);
-        System.out.println("LADO 1 MIDE: "+lado1);
+        System.out.println("LADO 1: "+lado1);
         
         return lado1;
     }
