@@ -10,23 +10,33 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        System.out.println("BIENVEENIDO AL SISTEMA DE FIGURAS GEOMETRICAS");
+        System.err.println("============================================");
+
+        System.out.println("BIENVENIDO AL SISTEMA DE FIGURAS GEOMETRICAS");
+        System.err.println("============================================");
+
         System.out.println("CUANTOS PUNTOS DESEA INGRESAR: (OP 1.- 3 PUNTOS OP 2.- 4 PUNTOS)");
         int opcion = 0;
         while (true) {
             try {
+               
                 System.out.print("INGRESE OPCION: ");
+                System.err.println("=============================");
+                
                 opcion = Integer.parseInt(scan.nextLine());
 
                 break;
 
             } catch (Exception e) {
+                System.err.println("=============================");
                 System.out.println("NUMERO INGRESADO NO VALIDO");
+                System.err.println("=============================");
             }
         }
 
         switch (opcion) {
             case 1:
+                
                 System.out.println("INGRESE PUNTOS SEPARADOS POR UNA ,");
 
                 //INGRESO DEL PUNTO 1
@@ -72,6 +82,7 @@ public class Main {
                 t.tipoTriangulo();
                 
             case 2:
+                
                 System.out.println("INGRESE PUNTOS SEPARADOS POR UNA ,");
 
                 //INGRESO DEL PUNTO 1
@@ -131,6 +142,18 @@ public class Main {
                 
                 //comparacion de lados
                 p.comparacionLados();
+                
+                
+            case 3:
+                System.err.println("=============================");
+                System.out.println("gracias por usar el programa ");
+                System.err.println("=============================");
+                break;
+            default:
+                System.err.println("=============================");
+                System.err.println("numero mayor al permitido");
+                System.err.println("vuelva a ejecutar el programa");
+                System.err.println("=============================");
 
     }
 
