@@ -71,6 +71,8 @@ public class Main {
                 t.ladoTres();
                 t.tipoTriangulo();
                 
+                break;
+                
             case 2:
                 System.out.println("INGRESE PUNTOS SEPARADOS POR UNA ,");
 
